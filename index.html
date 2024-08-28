@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zone01 school information</title>
+        <script src="./js/index.js"></script>
+        <link rel="stylesheet" href="./static/style.css" />
+    </head>
+    <body>
+
+        <div class="back"></div>
+        <div class="header_shadow"></div>
+        <header>
+            <img class="logo" src="./static/logo.svg">
+            <button id="logout" onclick="location.reload()">LogOut</button>
+        </header>
+
+        <div id="login_page">
+            <div class="title_welcome">Welcome at <span style="color:rgb(16,110,250);">Zone01</span>&thinsp;!</div>
+            <div class="right_left_container">
+                <div class="left">
+                    <iframe class="zone01_vod" src="https://www.youtube.com/embed/nBFEsXr5A4A" frameborder="0"></iframe>
+                    <div class="login">
+                        <ul>
+                            <li>
+                                <label for="username_login">Email or Username</label>
+                                <input type="text" id="username_login" required>
+                            </li>
+                            <li>
+                                <label for="password_login">Password</label>
+                                <input type="password" id="password_login" required>
+                            </li>
+                            <p style="margin-bottom: 10px;">
+                                <span id="password_error"> Your password or username is not correct</span>
+                            </p>
+                        </ul>
+                    </div>
+                    <button class="login_button" onclick="asking()">LogIn</button>
+                </div>
+                <div class="right">
+                    <h1 class="title">
+                        TRAIN YOURSELF IN
+                        <span style="color: #0063f9;">DIGITAL</span>
+                        CAREERS
+                    </h1>
+                    <p class="presentation_text">
+                        <span>
+                            Zone01 is a high-level digital developer training program for everyone,
+                            with no prerequisites. It's a zone of collective intelligence with a project-focused
+                            method to develop both your technical and human skills while evolving at your own pace.
+                            This approach will provide you with a stimulating and rewarding learning experience,
+                            as well as the tools to succeed in the job market.
+                        </span>
+                    </p>
+                    <h1 class="title">
+                        OUR
+                        <span style="color: #0063f9;">MISSION</span>
+                    </h1>
+                    <p class="presentation_text">
+                        <span>
+                            We are currently experiencing a massive shortage of coders/developers,
+                            which is only growing. In a post-COVID world where change is the only constant,
+                            we are digitizing our entire environment and disrupting it with exponential growth.
+                            We need to train more and faster to address this shortage. We must offer different,
+                            innovative, and tailored training and pedagogical approaches to all potential talents.
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="main_page">
+            <p class="welcoming_txt">
+                <span id="welcoming_txt">Welcome, </span>
+            </p>
+
+            <div class="main_block">
+                <div class="block1">
+                    <div class="in_block IB1">
+                        <div id="category">Div 01</div>
+                        <div id="xp"></div>
+                        <div id="activity">
+                            <div class="transaction">
+                                <input type="button" id="see_more_transaction" onclick="load_transaction_page('div01')" value="see more">
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="category_buttons" onclick="piscine_go()">Piscine-go</button>
+                            <button class="category_buttons" onclick="div01()">Div 01</button>
+                            <button class="category_buttons" onclick="piscine_js()">Piscine-js</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block2">
+                    <div class="in_block">
+                        <p class="title_block">
+                            <span>Audits ratio</span>
+                        </p>
+                        <div class="ratio_rod_container">
+                            <div class="rod">
+                                <div id="done_rod"></div>
+                            </div>
+                            <div>
+                                <span>Done</span><br>
+                                <span id="done"></span>
+                            </div>
+                        </div>
+                        <div class="ratio_rod_container">
+                            <div class="rod">
+                                <div id="received_rod"></div>
+                            </div>
+                            <div>
+                                <span>Received</span><br>
+                                <span id="received"></span>
+                            </div>
+                        </div>
+                        <div class="ratio">
+                            <span id="ratio"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="block3">
+                    <div class="in_block">
+                        <div id="audits_done">
+                            <div class="transaction">
+                                <input type="button" class="see_more_audits" onclick="load_transaction_page('audits_done')" value="more audits done">
+                            </div>
+                        </div>
+                        <div id="audits_received">
+                            <div class="transaction">
+                                <input type="button" class="see_more_audits" onclick="load_transaction_page('audits_received')" value="more audits received">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="./js/chart.js"></script>
+                <div class="block4">
+                    <div class="in_block">
+                        <p class="title_block t_b_2">
+                            <span>Evolution of audits ratio</span>
+                        </p>
+                        <div id="chart1"></div>
+                    </div>
+                </div>
+                <div class="block5">
+                    <div class="in_block">
+                        <p class="title_block t_b_2">
+                            <span>Evolution of xp</span>
+                        </p>
+                        <div id="chart2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="transaction_page">
+            <div id="transactions_history">
+                <span>Transactions history</span>
+                <button class="load_main_page" onclick="load_main_page()">Back to main page</button>
+            </div>
+        </div>
+
+    </body>
+</html>
